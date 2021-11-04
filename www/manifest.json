@@ -1,0 +1,24 @@
+{
+  "name": " Samir Massoundi - Projet dev mobile 1",
+  "short_name": "Tops de tops",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ff00ff",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logos/144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ]
+}
