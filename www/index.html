@@ -68,8 +68,8 @@
             </button>
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Ajouter un top</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Mes tops</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="showPage('top-add-form')">Ajouter un top</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="showPage('top-list')">Mes tops</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"></a></li>
                 </ul>
             </div>
@@ -77,44 +77,20 @@
 
         
           
-        <div class="page " id="top-list">
+        <div class="page" id="top-list">
             <ul id="topListLink">
             </ul>
 
         </div>
-        <div class="page hidden" id="List">
-            <h2>Series recommandées</h2>
-            <article>
-                <h3> Top . 1 : Final space</h3>
-                <img src="" alt="">
-            </article>
-
-            <article>
-                <h3>Top . 2 : Castlevania</h3>
-                <img src="" alt="">
-            </article>
-
-            <article>
-                <h3>Top . 3 : The Dragon Prince</h3>
-                <img src="" alt="">
-            </article>
-
-            <article>
-                <h3>Top . 4 : Devilman</h3>
-                <img src="" alt="">
-            </article>
-
-            <article>
-                <h3>Top . 5 : Invincible</h3>
-                <img src="" alt="">
-            </article>
+        <div class="page hidden" id="list-showcase">
+            
         </div>
-        <div class="page " id='top-add-form'>
+        <div class="page hidden" id='top-add-form'>
             <h2>Ajouter un top </h2>
-            <form id='form-show-list'>
+            <form id='form-show-list' onsubmit="postForm(event)">
                 <div class="form-group">
                     <label for="">Titre du top</label>
-                    <input type="text" class="form-control" id="topTitle" placeholder="Nom du top">
+                    <input type="text" class="form-control" id="topTitle" name="topTitle" placeholder="Nom du top">
                     <div class>
                     </div>
                 </div>
@@ -122,17 +98,28 @@
                 <hr>
                 <div class="form-group divShowItem " >
                     <label for="nameShow">Nom de la série</label>
-                    <input type="text" class="form-control" id="show-name" placeholder="nom de la série">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="show-name1" 
+                        name="show-name" 
+                        placeholder="nom de la série">
                     
                     <label for="imageLinkShow">Lien vers une image de la série</label>
-                    <input type="text" class="form-control" id="show"
-                        placeholder="Lien vers une image de la série">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="img_link1"
+                        placeholder="Lien vers une image de la série"
+                        name="img_link">
                     <hr/>
                 </div>
 
                 <button class="btn btn-primary" onclick="addShowForm(event)">Ajouter une serie (Max : 5)</button>
                 <button id='formSubmit' type="submit" class="btn btn-primary">Envoyer</button>
             </form>
+
+ 
         </div>
         <footer>Samir Massoundi - Tous droits reservés</footer>
 
@@ -141,7 +128,8 @@
 
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
-    
+    <script src="js/online.js"></script>
+
 </body>
 
 </html>

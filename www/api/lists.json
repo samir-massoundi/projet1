@@ -1,5 +1,5 @@
 {
-    `"tops": [{
+    "tops": [{
         "title": "Series d'animation recommandées",
         "content": [{
                 "name": "Final space",
@@ -22,7 +22,7 @@
                 "img_link": "https://sm.ign.com/ign_fr/news/a/amazons-in/amazons-invincible-official-first-look-trailer-for-adult-ani_1kj1.jpg"
             }
         ]
-    }`, {
+    }, {
         "title": "Series live recommandées",
         "content": [{
                 "name": "The Witcher",
