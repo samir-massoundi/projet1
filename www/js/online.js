@@ -183,12 +183,19 @@ function getListByKey(key){
 
        img = document.createElement('img')
        img.src = show.img_link
-       img.className = 'img-fluid'
+       img.className = 'img-fluid'     
 
        article.appendChild(h3)
        article.appendChild(img)
        listShowcase.appendChild(article)
     })
+    
+    let deleteButton =document.createElement('button')
+    deleteButton.className=('btn btn-danger')
+    deleteButton.innerText = 'Supprimer le top'
+    deleteButton.id = 'deleteButton'
+    deleteButton.setAttribute('onclick',`deleteTop(${key})`)
+    listShowcase.appendChild(deleteButton)
 }
 
 
@@ -228,13 +235,20 @@ function postForm(event) {
         formObject.content.push(showElement)
     }
     
-    //JSONIFY le tout
     let parseObj= JSON.stringify(formObject)
-    //Mettre le tour dans le local storage
+
     let nbKey = storage.length
     nbKey++;
     nbKey = nbKey.toString()
     storage.setItem(nbKey, parseObj)
     setTopLinks()
+}
+
+function deleteTop(key) {
+    let storage = window.localStorage
+    storage.removeItem(key)
+    setTopLinks()
+    showPage('top-list')
+
 }
 setTopLinks()
