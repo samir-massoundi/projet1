@@ -30,7 +30,6 @@
       "cordova-plugin-screen-orientation": {}
     },
     "platforms": [
-      "android",
       "browser",
       "electron"
     ]
