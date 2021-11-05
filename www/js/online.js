@@ -252,3 +252,8 @@ function deleteTop(key) {
 
 }
 setTopLinks()
+
+let storage = window.localStorage
+if (storage.length == 0) {
+    populateStorage()   
+}
